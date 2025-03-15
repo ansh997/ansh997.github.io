@@ -1,0 +1,13 @@
+- title: "Amazing Poetry Collection"
+  author: "John Doe"
+  description: "A beautiful collection of modern poetry that explores themes of nature and technology."
+  url: "https://example.com/poetry-collection"
+  source: "Poetry Magazine"
+
+- title: "Thought-Provoking Essay"
+  author: "Jane Smith"
+  description: "An insightful piece about the future of artificial intelligence and its impact on society."
+  url: "https://example.com/ai-essay"
+  source: "Medium"
+
+# Add more recommendations following the same format
