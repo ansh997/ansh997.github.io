@@ -1,13 +1,13 @@
-- title: "from Endymion"
-  author: " John Keats"
-  description: "My First Favourite English poem"
-  url: "https://www.poetryfoundation.org/poems/44469/endymion-56d2239287ca5"
-  source: "Poetry Foundation"
+- title: "Amazing Poetry Collection"
+  author: "John Doe"
+  description: "A beautiful collection of modern poetry that explores themes of nature and technology."
+  url: "https://example.com/poetry-collection"
+  source: "Poetry Magazine"
 
-- title: "yaad"
-  author: "FAIZ AHMAD FAIZ"
-  description: "This beautiful Urdu nazm, titled "Dasht-e-tanhai" (Desert of Loneliness), was written by the renowned poet Faiz Ahmed Faiz. It is a poignant expression of love, longing, and separation."
-  url: "https://www.rekhta.org/nazms/yaad-dasht-e-tanhaaii-men-ai-jaan-e-jahaan-larzaan-hain-faiz-ahmad-faiz-nazms"
-  source: "Nuskha Hai Wafa (Pg. 184)"
+- title: "Thought-Provoking Essay"
+  author: "Jane Smith"
+  description: "An insightful piece about the future of artificial intelligence and its impact on society."
+  url: "https://example.com/ai-essay"
+  source: "Medium"
 
 # Add more recommendations following the same format
