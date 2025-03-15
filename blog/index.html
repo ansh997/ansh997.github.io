@@ -1,0 +1,30 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="blog-header" style="text-align: center; margin-bottom: 3em;">
+    <h1 style="font-size: 3em; color: #333;">Blog Posts</h1>
+    <p style="color: #666; font-size: 1.2em;">A collection of my writings and favorite reads</p>
+</div>
+
+<div class="blog-posts">
+    {% for post in site.posts %}
+    <article class="post-preview" style="margin-bottom: 2em; padding: 1.5em; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h2 style="margin-bottom: 0.5em;">
+            <a href="{{ post.url }}" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>
+        </h2>
+        <p class="meta" style="color: #666; font-size: 0.9em; margin-bottom: 1em;">
+            {{ post.date | date: "%B %-d, %Y" }}
+        </p>
+        <p style="color: #444; font-size: 1.1em;">{{ post.excerpt }}</p>
+        <a href="{{ post.url }}" style="color: #0066cc; text-decoration: none; font-weight: bold;">Read More →</a>
+    </article>
+    {% endfor %}
+</div>
+
+{% if site.posts.size == 0 %}
+<div style="text-align: center; padding: 3em; color: #666;">
+    <p>More blog posts coming soon!</p>
+</div>
+{% endif %}
