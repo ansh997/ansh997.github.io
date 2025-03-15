@@ -10,4 +10,11 @@
   url: "https://example.com/ai-essay"
   source: "Medium"
 
+- title: "Dasht-e-Tanhai"
+  author: "Faiz Ahmed Faiz"
+  description: "A poignant Urdu nazm expressing love, longing, and separation in a desert of loneliness, where memories of the beloved linger vividly despite physical distance. The poem touches upon themes of individual subjectivity and desired union."
+  url: "https://rek.ht/a/0ri5"
+  source: "Rekhta Publications."
+
+
 # Add more recommendations following the same format
