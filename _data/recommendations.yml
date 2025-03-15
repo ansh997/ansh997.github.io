@@ -1,20 +1,13 @@
-- title: "Amazing Poetry Collection"
-  author: "John Doe"
-  description: "A beautiful collection of modern poetry that explores themes of nature and technology."
-  url: "https://example.com/poetry-collection"
-  source: "Poetry Magazine"
-
-- title: "Thought-Provoking Essay"
-  author: "Jane Smith"
-  description: "An insightful piece about the future of artificial intelligence and its impact on society."
-  url: "https://example.com/ai-essay"
-  source: "Medium"
-
 - title: "Dasht-e-Tanhai"
   author: "Faiz Ahmed Faiz"
   description: "A poignant Urdu nazm expressing love, longing, and separation in a desert of loneliness, where memories of the beloved linger vividly despite physical distance. The poem touches upon themes of individual subjectivity and desired union."
   url: "https://rek.ht/a/0ri5"
   source: "Rekhta Publications."
 
+- title: "A Thing of Beauty"
+  author: "John Keats"
+  description: "My First Favorite English Poem. A timeless poem celebrating the eternal nature of beauty and its power to bring joy and solace. Keats masterfully explores how beautiful things serve as a 'bower quiet for us' against the despondencies of human life, weaving natural imagery with profound philosophical reflection."
+  url: "https://ncert.nic.in/textbook/pdf/lefl113.pdf"
+  source: "Poetry Foundation"
 
 # Add more recommendations following the same format
