@@ -3,39 +3,58 @@ layout: default
 title: Himanshu Pal
 ---
 <div class="container">
-    <section id="about">
-        <h1>Himanshu Pal</h1>
-        <p style="text-align:center"><i>"Praxis tendatum docebit."</i> [Practice will teach those who try.]
-        — Carl Friedrich Gauß</p>
-        
-        <h2>About Me</h2>
-        <p>I am an Engineering graduate from IIT Roorkee, currently working as an Analyst at Barclays PLC. My research interests lie in Data Science and Machine Learning, with a focus on developing practical solutions to real-world problems. <a href="/about">Read more about me...</a></p>
+    <header class="profile-header" style="text-align: center; margin-bottom: 3em;">
+        <h1 style="font-size: 3.5em; margin-bottom: 0.2em;">Himanshu Pal</h1>
+        <h2 style="color: #666; font-weight: 300; margin-bottom: 1em;">Machine Learning Researcher | AI Engineer</h2>
+        <p style="font-style: italic; color: #666; margin: 1em 0;">
+            "Praxis tendatum docebit." [Practice will teach those who try.]
+            <br>— Carl Friedrich Gauß
+        </p>
+    </header>
+
+    <section id="about" style="margin: 2em 0; padding: 2em 0; border-bottom: 1px solid #eee;">
+        <h2 style="color: #333; margin-bottom: 1em;">About Me</h2>
+        <p style="font-size: 1.2em; line-height: 1.6; color: #444;">
+            I am a Machine Learning Researcher with expertise in AI and deep learning. Currently pursuing MS-Research at IIIT Hyderabad, focusing on Geometric Deep Learning and Large Language Models. My work spans across federated learning, adversarial robustness, and scalable AI architectures. 
+            <a href="/about" style="color: #0066cc; text-decoration: none;">Read more about my research journey...</a>
+        </p>
     </section>
 
-    <section id="research">
-        <h2>Research Interests</h2>
-        <ul>
-            <li>Machine Learning Applications</li>
-            <li>Data Science</li>
-            <li>Predictive Analytics</li>
-            <li>Financial Technology</li>
-        </ul>
+    <section id="research" style="margin: 2em 0; padding: 2em 0; border-bottom: 1px solid #eee;">
+        <h2 style="color: #333; margin-bottom: 1em;">Research Focus</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5em;">
+            <div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+                <h3 style="color: #0066cc;">Graph Neural Networks</h3>
+                <p>Temporal Graph Learning, Spectral Methods, Knowledge Graphs</p>
+            </div>
+            <div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+                <h3 style="color: #0066cc;">Large Language Models</h3>
+                <p>Fine-tuning, Optimization, Multi-modal Integration</p>
+            </div>
+            <div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+                <h3 style="color: #0066cc;">AI Systems</h3>
+                <p>Federated Learning, Adversarial Robustness, Scalable Architectures</p>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of your first major project and its impact.</p>
+    <section id="featured-work" style="margin: 2em 0; padding: 2em 0;">
+        <h2 style="color: #333; margin-bottom: 1em;">Featured Research</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2em;">
+            <div style="background: #fff; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <h3 style="color: #0066cc;">Federated Spectral Graph Transformers</h3>
+                <p style="color: #666;">Novel framework for federated learning on graph-structured data, addressing challenges in decentralized settings.</p>
+                <span style="color: #888; font-size: 0.9em;">TMLR 2025 (Under Review)</span>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of your second major project and its impact.</p>
+            <div style="background: #fff; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <h3 style="color: #0066cc;">TERA: Temporal Edge Rank Attack</h3>
+                <p style="color: #666;">Innovative adversarial attack framework for Temporal Graph Neural Networks.</p>
+                <span style="color: #888; font-size: 0.9em;">ICML 2025 (Under Review)</span>
             </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Description of your third major project and its impact.</p>
+            <div style="background: #fff; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <h3 style="color: #0066cc;">GraphForge</h3>
+                <p style="color: #666;">Combining LLMs with GNNs for enhanced reasoning over graph-structured data.</p>
+                <span style="color: #888; font-size: 0.9em;">TDL 2024</span>
             </div>
         </div>
     </section>
