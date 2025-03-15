@@ -10,4 +10,11 @@
   url: "https://ncert.nic.in/textbook/pdf/lefl113.pdf"
   source: "Poetry Foundation"
 
+- title: "Attention Is All You Need"
+  author: "Ashish Vaswani et al."
+  description: "The seminal paper that introduced the Transformer architecture, revolutionizing natural language processing and machine learning. This work presents a novel architecture based purely on attention mechanisms, dispensing with recurrence and convolutions entirely while achieving superior performance on various NLP tasks."
+  url: "https://arxiv.org/abs/1706.03762"
+  source: "arXiv"
+
+
 # Add more recommendations following the same format
