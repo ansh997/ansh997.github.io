@@ -1,0 +1,20 @@
+- title: "Dasht-e-Tanhai"
+  author: "Faiz Ahmed Faiz"
+  description: "A poignant Urdu nazm expressing love, longing, and separation in a desert of loneliness, where memories of the beloved linger vividly despite physical distance. The poem touches upon themes of individual subjectivity and desired union."
+  url: "https://rek.ht/a/0ri5"
+  source: "Rekhta Publications."
+
+- title: "A Thing of Beauty"
+  author: "John Keats"
+  description: "My First Favorite English Poem. A timeless poem celebrating the eternal nature of beauty and its power to bring joy and solace. Keats masterfully explores how beautiful things serve as a 'bower quiet for us' against the despondencies of human life, weaving natural imagery with profound philosophical reflection."
+  url: "https://ncert.nic.in/textbook/pdf/lefl113.pdf"
+  source: "Poetry Foundation"
+
+- title: "Attention Is All You Need"
+  author: "Ashish Vaswani et al."
+  description: "The seminal paper that introduced the Transformer architecture, revolutionizing natural language processing and machine learning. This work presents a novel architecture based purely on attention mechanisms, dispensing with recurrence and convolutions entirely while achieving superior performance on various NLP tasks."
+  url: "https://arxiv.org/abs/1706.03762"
+  source: "arXiv"
+
+
+# Add more recommendations following the same format

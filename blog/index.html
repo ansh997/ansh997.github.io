@@ -1,0 +1,62 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="blog-header" style="text-align: center; margin-bottom: 3em;">
+    <h1 style="font-size: 3em; color: #333;">Blog Posts</h1>
+    <p style="color: #666; font-size: 1.2em;">A collection of my writings and favorite reads</p>
+</div>
+
+<!-- Navigation tabs -->
+<div class="blog-nav" style="text-align: center; margin-bottom: 2em;">
+    <button onclick="showSection('my-posts')" style="padding: 0.5em 1em; margin: 0 0.5em; border: none; background: #0066cc; color: white; border-radius: 4px; cursor: pointer;">My Posts</button>
+    <button onclick="showSection('recommended')" style="padding: 0.5em 1em; margin: 0 0.5em; border: none; background: #0066cc; color: white; border-radius: 4px; cursor: pointer;">Recommended Reads</button>
+</div>
+
+<!-- My Posts Section -->
+<div id="my-posts" class="blog-section">
+    <div class="blog-posts">
+        {% for post in site.posts %}
+        <article class="post-preview" style="margin-bottom: 2em; padding: 1.5em; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 style="margin-bottom: 0.5em;">
+                <a href="{{ post.url }}" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>
+            </h2>
+            <p class="meta" style="color: #666; font-size: 0.9em; margin-bottom: 1em;">
+                {{ post.date | date: "%B %-d, %Y" }}
+            </p>
+            <p style="color: #444; font-size: 1.1em;">{{ post.excerpt }}</p>
+            <a href="{{ post.url }}" style="color: #0066cc; text-decoration: none; font-weight: bold;">Read More →</a>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Recommended Reads Section -->
+<div id="recommended" class="blog-section" style="display: none;">
+    <div class="recommended-posts">
+        {% for recommendation in site.data.recommendations %}
+        <article class="post-preview" style="margin-bottom: 2em; padding: 1.5em; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 style="margin-bottom: 0.5em;">
+                <a href="{{ recommendation.url }}" target="_blank" style="color: #0066cc; text-decoration: none;">{{ recommendation.title }}</a>
+            </h2>
+            <p class="meta" style="color: #666; font-size: 0.9em; margin-bottom: 1em;">
+                By {{ recommendation.author }}
+            </p>
+            <p style="color: #444; font-size: 1.1em;">{{ recommendation.description }}</p>
+            <a href="{{ recommendation.url }}" target="_blank" style="color: #0066cc; text-decoration: none; font-weight: bold;">Read on {{ recommendation.source }} →</a>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- JavaScript for tab switching -->
+<script>
+function showSection(sectionId) {
+    const sections = document.getElementsByClassName('blog-section');
+    for (let section of sections) {
+        section.style.display = 'none';
+    }
+    document.getElementById(sectionId).style.display = 'block';
+}
+</script>
