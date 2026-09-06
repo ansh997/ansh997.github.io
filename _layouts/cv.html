@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        /* Academic CV specific styles */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        .cv-header {
+            text-align: center;
+            margin-bottom: 3em;
+            border-bottom: 2px solid #333;
+            padding-bottom: 1em;
+        }
+
+        .cv-name {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+        }
+
+        .cv-title {
+            font-size: 1.5em;
+            font-weight: normal;
+            color: #444;
+        }
+
+        .contact-info {
+            margin-top: 1em;
+            font-size: 1em;
+        }
+
+        section {
+            margin-bottom: 2.5em;
+        }
+
+        .section-heading {
+            font-size: 1.5em;
+            font-weight: bold;
+            border-bottom: 1px solid #666;
+            padding-bottom: 0.3em;
+            margin-bottom: 1em;
+        }
+
+        .entry {
+            margin-bottom: 1.5em;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            margin-bottom: 0.3em;
+        }
+
+        .entry-details {
+            margin-bottom: 0.5em;
+            font-style: italic;
+        }
+
+        .entry-description {
+            margin-left: 1em;
+        }
+
+        ul {
+            margin: 0.5em 0 0.5em 2em;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.3em;
+        }
+
+        a {
+            color: #00458b;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .publication-entry {
+            margin-bottom: 1em;
+        }
+
+        .publication-authors {
+            font-style: italic;
+        }
+
+        @media print {
+            body {
+                padding: 0.5in;
+                font-size: 12pt;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+    {{ content }}
+</body>
+</html>
