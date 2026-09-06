@@ -10,15 +10,15 @@ title: Blog
 
 <!-- Navigation tabs -->
 <div class="blog-nav" style="text-align: center; margin-bottom: 2em;">
-    <button onclick="showSection('my-posts')" style="padding: 0.5em 1em; margin: 0 0.5em; border: none; background: #0066cc; color: white; border-radius: 4px; cursor: pointer;">My Posts</button>
-    <button onclick="showSection('recommended')" style="padding: 0.5em 1em; margin: 0 0.5em; border: none; background: #0066cc; color: white; border-radius: 4px; cursor: pointer;">Recommended Reads</button>
+    <a href="#my-posts" style="padding: 0.5em 1em; margin: 0 0.5em; border: none; background: #0066cc; color: white; border-radius: 4px;">My Posts</a>
+    <a href="#recommended" style="padding: 0.5em 1em; margin: 0 0.5em; border: none; background: #0066cc; color: white; border-radius: 4px;">Recommended Reads</a>
 </div>
 
 <!-- My Posts Section -->
 <div id="my-posts" class="blog-section">
     <div class="blog-posts">
         {% for post in site.posts %}
-        <article class="post-preview" style="margin-bottom: 2em; padding: 1.5em; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <article class="post-preview">
             <h2 style="margin-bottom: 0.5em;">
                 <a href="{{ post.url }}" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>
             </h2>
@@ -33,10 +33,10 @@ title: Blog
 </div>
 
 <!-- Recommended Reads Section -->
-<div id="recommended" class="blog-section" style="display: none;">
+<div id="recommended" class="blog-section">
     <div class="recommended-posts">
         {% for recommendation in site.data.recommendations %}
-        <article class="post-preview" style="margin-bottom: 2em; padding: 1.5em; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <article class="post-preview">
             <h2 style="margin-bottom: 0.5em;">
                 <a href="{{ recommendation.url }}" target="_blank" style="color: #0066cc; text-decoration: none;">{{ recommendation.title }}</a>
             </h2>
@@ -49,14 +49,3 @@ title: Blog
         {% endfor %}
     </div>
 </div>
-
-<!-- JavaScript for tab switching -->
-<script>
-function showSection(sectionId) {
-    const sections = document.getElementsByClassName('blog-section');
-    for (let section of sections) {
-        section.style.display = 'none';
-    }
-    document.getElementById(sectionId).style.display = 'block';
-}
-</script>
