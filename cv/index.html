@@ -1,0 +1,146 @@
+---
+layout: cv
+title: Curriculum Vitae - Himanshu Pal
+permalink: /cv/
+---
+
+<header class="cv-header">
+    <h1 class="cv-name">Himanshu Pal</h1>
+    <div class="cv-subtitle">Machine Learning Engineer-II</div>
+    <div class="cv-contact">
+        <span>+91-9452778447</span>
+        <span class="sep">|</span>
+        <a href="mailto:palhimanshu997@gmail.com">palhimanshu997@gmail.com</a>
+        <span class="sep">|</span>
+        <a href="https://linkedin.com/in/hmnshpl" target="_blank" rel="noopener noreferrer">linkedin.com/in/hmnshpl</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/ansh997" target="_blank" rel="noopener noreferrer">github.com/ansh997</a>
+        <span class="sep">|</span>
+        <a href="https://ansh997.github.io" target="_blank" rel="noopener noreferrer">ansh997.github.io</a>
+    </div>
+</header>
+
+<section class="cv-section">
+    <h2 class="cv-section-title">Professional Summary</h2>
+    <p class="cv-summary">
+        Machine Learning Engineer with 5+ years across ML systems, distributed model training, and deep learning research. Builds and troubleshoots multi-GPU / multi-node training pipelines (PyTorch, SLURM) with reproducible tracking, checkpointing, and failure recovery. Delivered production ML at enterprise scale at ServiceNow, including an agentic ticket-resolution system with a neurosymbolic verification layer. Published at AAAI 2026, TMLR 2025, and KDD/ASONAM 2025.
+    </p>
+</section>
+
+<section class="cv-section">
+    <h2 class="cv-section-title">Education</h2>
+    <div class="cv-item">
+        <div class="cv-item-header">
+            <span class="cv-item-title">MS (Research), IIIT Hyderabad</span>
+            <span class="cv-item-date">Jul 2023 – Dec 2025</span>
+        </div>
+        <div class="cv-item-description">
+            <em>Thesis: Adversarial and Privacy-preserving methods in Geometric Deep Learning</em>
+        </div>
+    </div>
+    <div class="cv-item">
+        <div class="cv-item-header">
+            <span class="cv-item-title">B.Tech, IIT Roorkee</span>
+            <span class="cv-item-date">Jul 2016 – May 2020</span>
+        </div>
+    </div>
+</section>
+
+<section class="cv-section">
+    <h2 class="cv-section-title">Publications</h2>
+    <div class="pub-item">
+        <span class="pub-venue">AAAI 2026</span>
+        <span class="pub-title">LoReTTA: A Low Resource Framework to Poison Continuous Time Dynamic Graphs</span> &middot;
+        <span class="pub-authors">Himanshu Pal*, Venkata Sai Pranav Bachina*, Ankit Gangwal, Charu Sharma</span>
+        <div class="pub-desc">
+            Low-resource adversarial poisoning framework for continuous-time dynamic graphs, exposing temporal-graph vulnerability under a minimal perturbation budget.
+        </div>
+    </div>
+    <div class="pub-item">
+        <span class="pub-venue">TMLR 2025</span>
+        <span class="pub-title">Federated Spectral Graph Transformers Meet Neural Ordinary Differential Equations for Non-IID Graphs</span> &middot;
+        <span class="pub-authors">Kishan Gurumurthy*, Himanshu Pal*, Charu Sharma</span>
+        <div class="pub-desc">
+            Combined spectral graph transformers with neural ODEs for federated learning over non-IID graph distributions.
+        </div>
+    </div>
+    <div class="pub-item">
+        <span class="pub-venue">KDD(W)/ASONAM 2025</span>
+        <span class="pub-title">Predict Confidently, Predict Right: Abstention in Dynamic Graph Learning</span> &middot;
+        <span class="pub-authors">Jayadratha Gayen, Himanshu Pal, Naresh Manwani, Charu Sharma</span>
+        <div class="pub-desc">
+            Selective prediction (abstention) for dynamic graph models, letting them decline uncertain predictions instead of forcing low-confidence outputs.
+        </div>
+    </div>
+</section>
+
+<section class="cv-section">
+    <h2 class="cv-section-title">Professional Experience</h2>
+    <div class="cv-item">
+        <div class="cv-item-header">
+            <span class="cv-item-title">ServiceNow</span>
+            <span class="cv-item-date">Oct 2025 – Present</span>
+        </div>
+        <div class="cv-item-subtitle">
+            <span>Machine Learning Engineer II</span>
+        </div>
+        <ul class="cv-list">
+            <li>Built a production churn prediction system processing 25M daily customer action events, designed and delivered three pipeline stages (feature selection, training with hyperparameter tuning, prediction with SHAP explainability) across three internal services (Glide scheduler, Nagini training pipeline, Java prediction service); achieved 80% AUC on held-out evaluation.</li>
+            <li>Engineered parallel execution of SHAP-based explainability alongside batch prediction to meet latency requirements at enterprise scale.</li>
+            <li>Benchmarked tabular foundation models (TabPFN, TabDPT) and relational foundation models against tuned gradient boosting baselines; found foundation models achieved comparable accuracy without task-specific training.</li>
+            <li>Developing a neurosymbolic verification layer for an agentic ticket resolution system (Zero Touch Service Desk), the agent performs actions such as password resets and account modifications, and the verification layer checks privilege constraints before execution; improved end-to-end task closure from 0% to 33%.</li>
+        </ul>
+    </div>
+    <div class="cv-item">
+        <div class="cv-item-header">
+            <span class="cv-item-title">Barclays PLC, Mumbai</span>
+            <span class="cv-item-date">Feb 2021 – Jul 2023</span>
+        </div>
+        <div class="cv-item-subtitle">
+            <span>Quantitative Analyst &mdash; Automated Pricing &amp; Trade Analytics</span>
+        </div>
+        <ul class="cv-list">
+            <li>Built an automated PnL reconciliation pipeline in Python and SQL that replaced a manual Excel-based workflow, reducing daily report generation from 10 minutes to 2 minutes and eliminating manual data-entry errors.</li>
+            <li>Designed an event-driven pricing service triggered by inbound email RFQs (requests for quote), generating structured option quotes in under 30 seconds versus a previous manual turnaround of several hours.</li>
+            <li>Integrated and maintained pricing and market-data APIs to support quote generation and desk-level analytics for Interest Rate Options products.</li>
+            <li>Worked on the Rates Options Structuring desk covering interest rate derivatives (swaptions, caps/floors, exotics), requiring working knowledge of stochastic pricing models, Greeks, and risk sensitivities.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="cv-section">
+    <h2 class="cv-section-title">Research Experience</h2>
+    <div class="cv-item">
+        <div class="cv-item-header">
+            <span class="cv-item-title">IIIT Hyderabad</span>
+            <span class="cv-item-date">Jul 2023 – Dec 2025</span>
+        </div>
+        <div class="cv-item-subtitle">
+            <span>Graduate Researcher &middot; Advisor: Dr. Charu Sharma | PyTorch, CUDA, HuggingFace, SLURM, W&amp;B</span>
+        </div>
+        <ul class="cv-list">
+            <li>Built and optimized distributed training pipelines for graph and language models across multi-GPU / multi-node SLURM clusters, with reproducible experiment tracking (W&amp;B) and checkpointing for long-running jobs.</li>
+            <li>Diagnosed and resolved distributed training failures and implemented checkpoint/failure-recovery workflows to support publication-grade results in graph learning.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="cv-section">
+    <h2 class="cv-section-title">Technical Skills</h2>
+    <div class="skill-line">
+        <span class="skill-name">Distributed Training:</span>
+        <span>Multi-GPU / multi-node training, SLURM, PyTorch, CUDA, checkpointing, failure recovery</span>
+    </div>
+    <div class="skill-line">
+        <span class="skill-name">LLM / Fine-tuning:</span>
+        <span>HuggingFace, Transformers; LoRA / QLoRA / PEFT, RAG (academic project)</span>
+    </div>
+    <div class="skill-line">
+        <span class="skill-name">MLOps / Infra:</span>
+        <span>Docker, AWS (EC2/S3/Lambda), W&amp;B, experiment tracking</span>
+    </div>
+    <div class="skill-line">
+        <span class="skill-name">Languages:</span>
+        <span>Python, C++, SQL, Bash</span>
+    </div>
+</section>

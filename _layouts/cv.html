@@ -5,80 +5,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <style>
-        /* Academic CV specific styles */
-        body {
-            font-family: "Times New Roman", Times, serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2em;
+        :root {
+            --text-color: #111;
+            --muted-color: #555;
+            --border-color: #333;
+            --link-color: #0b5394;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f5f7;
+            color: var(--text-color);
+            font-family: "Times New Roman", Times, Georgia, serif;
+            line-height: 1.45;
+            font-size: 10.5pt;
+        }
+
+        /* Top Action Bar for screen */
+        .cv-actions-bar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 0.75em 1.5em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .cv-actions-bar a,
+        .cv-actions-bar button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+        }
+
+        .btn-back {
+            color: #333;
+            background: #eef1f5;
+            border: 1px solid #d5d9e0;
+        }
+
+        .btn-back:hover {
+            background: #e2e6eb;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-print {
+            color: #ffffff;
+            background: #0066cc;
+            border: 1px solid #0052a3;
+        }
+
+        .btn-print:hover {
+            background: #0052a3;
+        }
+
+        .btn-pdf {
+            color: #333;
+            background: #ffffff;
+            border: 1px solid #ccc;
+        }
+
+        .btn-pdf:hover {
+            background: #f8f8f8;
+            border-color: #bbb;
+        }
+
+        /* CV Sheet / Paper Container */
+        .cv-paper {
+            max-width: 850px;
+            margin: 25px auto 50px auto;
+            background: #ffffff;
+            padding: 45px 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 2px;
+        }
+
+        /* CV Header */
         .cv-header {
             text-align: center;
-            margin-bottom: 3em;
-            border-bottom: 2px solid #333;
-            padding-bottom: 1em;
+            margin-bottom: 1.2em;
+            padding-bottom: 0.8em;
+            border-bottom: 1.5px solid var(--border-color);
         }
 
         .cv-name {
-            font-size: 2.5em;
-            margin-bottom: 0.2em;
-        }
-
-        .cv-title {
-            font-size: 1.5em;
-            font-weight: normal;
-            color: #444;
-        }
-
-        .contact-info {
-            margin-top: 1em;
-            font-size: 1em;
-        }
-
-        section {
-            margin-bottom: 2.5em;
-        }
-
-        .section-heading {
-            font-size: 1.5em;
+            font-size: 24pt;
             font-weight: bold;
-            border-bottom: 1px solid #666;
-            padding-bottom: 0.3em;
-            margin-bottom: 1em;
+            letter-spacing: 0.5px;
+            margin: 0 0 0.15em 0;
+            text-transform: uppercase;
         }
 
-        .entry {
-            margin-bottom: 1.5em;
+        .cv-subtitle {
+            font-size: 12pt;
+            font-weight: 600;
+            color: var(--muted-color);
+            margin: 0 0 0.4em 0;
         }
 
-        .entry-title {
+        .cv-contact {
+            font-size: 9.5pt;
+            color: var(--muted-color);
+            margin-top: 0.3em;
+        }
+
+        .cv-contact a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .cv-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .cv-contact span.sep {
+            margin: 0 6px;
+            color: #999;
+        }
+
+        /* Sections */
+        .cv-section {
+            margin-bottom: 1.3em;
+        }
+
+        .cv-section-title {
+            font-size: 11pt;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2px;
+            margin: 0 0 0.6em 0;
+            color: #000;
+        }
+
+        /* Items / Rows */
+        .cv-item {
+            margin-bottom: 0.85em;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.15em;
+        }
+
+        .cv-item-title {
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+
+        .cv-item-date {
+            font-style: normal;
+            font-size: 10pt;
+            color: #333;
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        .cv-item-subtitle {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            font-size: 10pt;
+            color: #333;
             margin-bottom: 0.3em;
         }
 
-        .entry-details {
-            margin-bottom: 0.5em;
-            font-style: italic;
+        .cv-item-description {
+            font-size: 10pt;
+            color: #222;
         }
 
-        .entry-description {
-            margin-left: 1em;
+        .cv-summary {
+            font-size: 10pt;
+            text-align: justify;
+            line-height: 1.45;
+            margin: 0;
         }
 
-        ul {
-            margin: 0.5em 0 0.5em 2em;
+        /* Lists */
+        ul.cv-list {
+            margin: 0.3em 0 0.5em 1.2em;
             padding: 0;
         }
 
-        li {
-            margin-bottom: 0.3em;
+        ul.cv-list li {
+            margin-bottom: 0.25em;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #222;
         }
 
+        /* Publication Entry */
+        .pub-item {
+            margin-bottom: 0.75em;
+            font-size: 10pt;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .pub-title {
+            font-weight: bold;
+        }
+
+        .pub-authors {
+            color: #222;
+        }
+
+        .pub-venue {
+            font-weight: bold;
+            float: right;
+            color: #000;
+        }
+
+        .pub-desc {
+            margin-top: 0.15em;
+            font-size: 9.5pt;
+            color: #444;
+            font-style: italic;
+        }
+
+        /* Skills table / lines */
+        .skill-line {
+            font-size: 10pt;
+            margin-bottom: 0.35em;
+            line-height: 1.4;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            display: inline-block;
+            min-width: 155px;
+        }
+
+        /* Links */
         a {
-            color: #00458b;
+            color: var(--link-color);
             text-decoration: none;
         }
 
@@ -86,28 +274,61 @@
             text-decoration: underline;
         }
 
-        .publication-entry {
-            margin-bottom: 1em;
-        }
-
-        .publication-authors {
-            font-style: italic;
-        }
-
+        /* Print formatting */
         @media print {
             body {
-                padding: 0.5in;
-                font-size: 12pt;
+                background: #ffffff;
+                color: #000000;
+                font-size: 10pt;
+                line-height: 1.38;
+            }
+
+            .cv-actions-bar {
+                display: none !important;
+            }
+
+            .cv-paper {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border: none;
+            }
+
+            @page {
+                size: letter;
+                margin: 1.2cm 1.4cm;
             }
 
             a {
-                text-decoration: none;
-                color: #000;
+                color: #000000 !important;
+                text-decoration: none !important;
+            }
+
+            .cv-section {
+                break-inside: auto;
+                page-break-inside: auto;
+                margin-bottom: 1.1em;
+            }
+
+            .cv-item, .pub-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
             }
         }
     </style>
 </head>
 <body>
-    {{ content }}
+    <div class="cv-actions-bar">
+        <a href="/" class="btn-back">← Back to Website</a>
+        <div class="btn-group">
+            <button onclick="window.print()" class="btn-print">🖨️ Print / Save as PDF</button>
+            <a href="https://drive.google.com/file/d/1RDaiM43e1fAvuMSUfoKiPRVsG5l87KU5/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-pdf">📄 Download PDF</a>
+        </div>
+    </div>
+
+    <div class="cv-paper">
+        {{ content }}
+    </div>
 </body>
 </html>
